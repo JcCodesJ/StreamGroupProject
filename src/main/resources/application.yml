@@ -1,5 +1,7 @@
 spring:
-  # lazy init
+  config:
+    activate:
+      on-profile: justin
   main:
     lazy-initialization: false
   # setup profiles
@@ -14,13 +16,13 @@ spring:
       width: 20
   # database setup - possible de faire appel au prop du pom.xml : ${prop}
   datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:mem:memDB
+    url: jdbc:mysql://localhost:3306/user
     username: root
-    password: pass
+    password:
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 # custom properties
 custom:

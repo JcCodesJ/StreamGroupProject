@@ -2,6 +2,7 @@ package carroll.tbel.projectspringdb.controllers;
 
 import carroll.tbel.projectspringdb.dataAccess.entity.User;
 import carroll.tbel.projectspringdb.dataAccess.entity.UserService;
+import carroll.tbel.projectspringdb.metier.service.userServ.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
