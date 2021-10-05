@@ -3,6 +3,7 @@ package carroll.tbel.projectspringdb.metier.service.userServ;
 
 import carroll.tbel.projectspringdb.dataAccess.entity.User;
 import carroll.tbel.projectspringdb.dataAccess.repository.UserRepository;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateOne(Long id, User user) {
+    public User updateOne(Long id, @NonNull User user) {
         if (user.getId() != null) {
             return this.repository.save(user);
         }
@@ -45,5 +46,15 @@ public class UserServiceImpl implements UserService {
         u.setCreatedAt(user.getCreatedAt());
 
         return this.repository.save(u);
+    }
+
+    @Override
+    public void deleteOne(Long id) {
+        this.repository.deleteById(id);
+    }
+
+    @Override
+    public User insert(User user) {
+        return this.repository.save(user);
     }
 }

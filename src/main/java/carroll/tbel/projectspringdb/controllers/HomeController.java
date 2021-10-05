@@ -23,6 +23,9 @@ public class HomeController {
     @GetMapping(path = {"", "/", "/index"})
     public String indexAction(Model view) {
         view.addAttribute("name", "Admin");
+        view.addAttribute("users", this.userService.findAll());
+        view.addAttribute("Admin", this.userService.findOneByLogin("Admin", ""));
+
         return "home/index";
     }
 
@@ -35,6 +38,8 @@ public class HomeController {
     public String editAction(Model view, @PathVariable("user")User user) {
 
         view.addAttribute("name", "Admin");
+        view.addAttribute("users", this.userService.findAll());
+        view.addAttribute("sUser", user);
 
         return "home/index";
     }
