@@ -5,5 +5,5 @@ import carroll.tbel.projectspringdb.metier.dto.GameDTO;
 
 public interface GameService extends CrudService<GameDTO, String>{
 
-    void add(GameDTO toAdd);
+    void add(GameDTO toAdd) throws ElementAlreadyPresentException;
 }

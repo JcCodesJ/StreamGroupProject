@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
+import org.springframework.context.annotation.Bean;
 import org.springframework.validation.annotation.Validated;
 
 @EqualsAndHashCode

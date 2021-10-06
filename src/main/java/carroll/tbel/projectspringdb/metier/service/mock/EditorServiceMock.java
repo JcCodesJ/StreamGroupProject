@@ -2,17 +2,17 @@ package carroll.tbel.projectspringdb.metier.service.mock;
 
 import carroll.tbel.projectspringdb.exceptions.ElementAlreadyPresentException;
 import carroll.tbel.projectspringdb.exceptions.ElementNotFoundException;
-import carroll.tbel.projectspringdb.metier.dto.GameDTO;
-import carroll.tbel.projectspringdb.metier.service.GameService;
+import carroll.tbel.projectspringdb.metier.dto.EditorDTO;
+import carroll.tbel.projectspringdb.metier.service.EditorService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class GameServiceMock implements GameService {
+public class EditorServiceMock implements EditorService {
 
     @Override
-    public List<GameDTO> getAll() {
+    public List<EditorDTO> getAll() {
         return null;
     }
 
@@ -22,7 +22,7 @@ public class GameServiceMock implements GameService {
     }
 
     @Override
-    public void add(GameDTO toAdd) throws ElementAlreadyPresentException {
+    public void add(EditorDTO toAdd) throws ElementAlreadyPresentException {
 
     }
 }

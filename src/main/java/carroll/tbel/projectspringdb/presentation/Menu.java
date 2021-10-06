@@ -137,7 +137,11 @@ public class Menu {
         System.out.println("Name of editor : ");
         builder.name(sc.nextLine() );
 
-        editorService.add( builder.build() );
+        try {
+            editorService.add( builder.build() );
+        } catch (ElementAlreadyPresentException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("Added information successfully");
 
@@ -153,7 +157,11 @@ public class Menu {
         System.out.println("Pegi rating : ");
         builder.pegi(sc.nextInt() );
 
-        gameService.add( builder.build() );
+        try {
+            gameService.add( builder.build() );
+        } catch (ElementAlreadyPresentException e) {
+            e.printStackTrace();
+        }
 
         System.out.println("Added information successfully");
     }
