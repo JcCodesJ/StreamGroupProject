@@ -4,12 +4,16 @@ import carroll.tbel.projectspringdb.dataAccess.entity.Console;
 import carroll.tbel.projectspringdb.dataAccess.entity.Game;
 import carroll.tbel.projectspringdb.metier.dto.ConsoleDTO;
 import carroll.tbel.projectspringdb.metier.dto.GameDTO;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("project")
+@Getter @Setter
+@Profile("dev")
 public class ConsoleMapper implements Mapper<ConsoleDTO, Console> {
     
     @Autowired

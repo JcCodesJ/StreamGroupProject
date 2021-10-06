@@ -1,28 +1,30 @@
 spring:
   config:
     activate:
-      on-profile: justin
-  main:
-    lazy-initialization: false
-  # setup profiles
-  profiles:
-    active: project
-  # setup banner.txt
-  banner:
-    location: classpath:banner.txt.txt
-    image:
-      location: classpath:baniere.png
-      height: 10
-      width: 20
-  # database setup - possible de faire appel au prop du pom.xml : ${prop}
+      on-profile: dev
+
   datasource:
     url: jdbc:mysql://localhost:3306/user
     username: root
     password:
   jpa:
     hibernate:
-      ddl-auto: update
+     ddl-auto: update
     show-sql: true
+
+  #  main:
+#    lazy-initialization: false
+#  # setup profiles
+#  profiles:
+#    active: project
+#  # setup banner.txt
+##  banner:
+##    location: classpath:banner.txt
+##    image:
+##      location: classpath:baniere.png
+##      height: 10
+##      width: 20
+  # database setup - possible de faire appel au prop du pom.xml : ${prop}
 
 # custom properties
 custom:
