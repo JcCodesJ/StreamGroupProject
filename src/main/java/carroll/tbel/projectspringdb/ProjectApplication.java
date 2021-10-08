@@ -14,9 +14,8 @@ public class ProjectApplication {
         //Container
         ApplicationContext ctx = SpringApplication.run(ProjectApplication.class, args);
 
-        Menu m = ctx.getBean(Menu.class);
-
-        m.start();
+//        Menu m = ctx.getBean(Menu.class);
+//        m.start();
 
     }
 }

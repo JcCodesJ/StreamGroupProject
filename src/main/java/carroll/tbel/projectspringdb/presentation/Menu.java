@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
-@Component
+//@Component
 @Impl
-@Profile("project")
+//@Profile("project")
 public class Menu {
 
     @Autowired

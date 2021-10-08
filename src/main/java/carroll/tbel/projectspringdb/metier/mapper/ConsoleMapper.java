@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Getter @Setter
-@Profile("dev")
+//@Profile("dev")
 public class ConsoleMapper implements Mapper<ConsoleDTO, Console> {
 
 //    @Autowired

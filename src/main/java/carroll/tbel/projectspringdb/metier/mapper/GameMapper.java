@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Getter @Setter
-@Profile("project")
+//@Profile("project")
 public class GameMapper implements Mapper<GameDTO, Game> {
 
     @Autowired
