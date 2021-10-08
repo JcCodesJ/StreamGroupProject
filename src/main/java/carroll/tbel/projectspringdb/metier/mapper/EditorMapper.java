@@ -15,15 +15,17 @@ import java.util.stream.Collectors;
 @Profile("project")
 public class EditorMapper implements Mapper<EditorDTO, Editor> {
 
-
+/*
     @Autowired
     private Mapper<GameDTO, Game> gameMapper;
 
-    /*@Autowired
-    private LivreMapper livreMapper;*/
+    @Autowired
+    private LivreMapper livreMapper;
 
     @Autowired
     private Mapper<ConsoleDTO, Console> consoleMapper;
+    */
+
 
     @Override
     public EditorDTO entityToDto(Editor editor) {

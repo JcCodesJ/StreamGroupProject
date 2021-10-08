@@ -15,12 +15,12 @@ import org.springframework.stereotype.Component;
 @Getter @Setter
 @Profile("dev")
 public class ConsoleMapper implements Mapper<ConsoleDTO, Console> {
-    
-    @Autowired
-    private  Mapper<GameDTO, Game> gameMapper;
-    
-    @Autowired
-    private Mapper<ConsoleDTO, Console> consoleMapper;
+
+//    @Autowired
+//    private  Mapper<GameDTO, Game> gameMapper;
+
+//    @Autowired
+//    private Mapper<ConsoleDTO, Console> consoleMapper;
 
     @Override
     public ConsoleDTO entityToDto(Console console) {

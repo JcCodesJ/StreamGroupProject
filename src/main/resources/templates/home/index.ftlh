@@ -1,3 +1,4 @@
+<#include "../layout.ftlh">
 <!doctype html>
 <html lang="en">
 <head>
